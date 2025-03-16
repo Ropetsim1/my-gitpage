@@ -5,6 +5,7 @@ import hashlib
 import os
 
 app = Flask(__name__)
+app.config['DEBUG'] = False
 
 # Load accounts from JSON file and hash passwords with SHA-256
 with open("myfile.json", "r") as out_file:
@@ -132,4 +133,4 @@ if __name__ == '__main__':
     # Create the uploads folder if it doesn't exist
     if not os.path.exists(UPLOAD_FOLDER):
         os.makedirs(UPLOAD_FOLDER)
-    app.run(debug=True)
+    app.run()
