@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Css/Main.css') }}">
+    </head>
+<body>
+    <UniqueHeader>
+        <header>
+            <h1>Ro page!</h1>
+        </header>
+    </UniqueHeader>
+    <nav>
+        <ul>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <p id="output"></p>
+              <script>
+               const sessionId = getCookie("session_id");
+               const outputElement = document.getElementById("output");
+               outputElement.textContent = `${atob(sessionCookie)}`;
+              </script>
+              
+        </ul>
+    </nav>
+    <article>
+
+    </article>
+    <section>
+
+    </section>
+    <aside>
+
+    </aside>
+    <section></section>
+</body>
+</html>
